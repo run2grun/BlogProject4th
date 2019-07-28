@@ -1,0 +1,56 @@
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            {% load staticfiles %}
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>rlarms0blog</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Import materialize.css-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </head>
+
+        <body>
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="home"><a href="{% url 'home' %}"><i class="material-icons">home</i></a></li>
+                    <li class="portfolio">
+                        <a href="{% url 'portfolio' %}" onclick="change()">
+                            <i id="object" class= "material-icons">folder</i>
+                        </a>
+                    </li>
+                </ul>
+                
+                        <script>
+                            function change(){
+                                var string = "folder_open";
+                                document.getElementById("object").innerHTML=string;
+                            }
+                        </script>
+                        
+                    
+                
+                <form>
+                        <div class="input-field right">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+
+        </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+            <!--JavaScript at end of body for optimized loading-->
+        
+        </body>
+    </html>

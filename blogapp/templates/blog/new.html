@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <div class="container">
+            <form action = "{% url 'create' %}">
+                {% csrf_token %}
+                <h5> 제목 </h5>
+                <input type="text" name="title">
+                <br>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                    <textarea id="textarea2" class="materialize-textarea" name="body"></textarea>
+                    <label for="textarea2">본문</label>
+                    </div>
+                </div>
+                <br><br>
+                <button class="btn waves-effect waves-light" type="submit" value="제출하기">Submit <i class="material-icons right">send</i></button>
+            </form>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'KOMACON'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+
+.table {
+    font-family: 'KOMACON'; 
+    padding: 15px 5px;
+    display: table;
+    vertical-align: middle;
+    border-radius: 2px;
+    position: relative;
+}
+td, th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.title {
+    color: #002C40 !important ;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+}
+nav .input-field {
+    margin-left: 2rem;
+    height: 80%;
+}
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.input-field input[type=search] {
+    display: block;
+    margin-left: 2rem;
+    line-height: inherit;
+    -webkit-transition: .3s background-color;
+    transition: .3s background-color;
+}
+ul:not(.browser-default) {
+    padding: auto;
+    list-style-type: none;
+    
+}
+.paginator{
+    display: block;
+    position: relative;
+    align-items: center;
+}
+.btn-floating i {
+    display: block;
+    line-height: 56px;
+    background-color: #97b4d7!important ;
+    position: relative;
+
+}

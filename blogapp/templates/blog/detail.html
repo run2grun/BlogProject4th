@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <body>
+        <div class="container">
+            <h2>{{blog.title}}</h2>
+            <p>{{blog.pub_date}}</p>
+            <p>{{blog.body}}</p>
+            <br><br>
+
+            <a href="{% url 'home' %}"><i class="material-icons">keyboard_backspace</i></a>
+            <a href="{% url 'edit' blog.id %}">  <i class="material-icons">edit</i></a>
+            <a href="{% url 'delete' blog.id %}"> <i class="material-icons">delete</i></a>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+        <br><br>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">~</th>
+                        <th scope="col">Title</th>
+                        <th scope="col" style="width:30%">Date</th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    {% for blog in posts %}
+                    <tr>
+                        <td scope="row">{{blog.id}}</td>
+                        <td><a class="title" href="{% url 'detail' blog.id %}">{{blog.title}}</a></td>
+                        <td>{{blog.pub_date}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br><br>
+
+            
+
+            <ul class="pagination">
+                {% if posts.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1"><i class=" medium material-icons">first_page</i></a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{posts.previous_page_number}}"><i class=" medium material-icons">keyboard_arrow_left</i></a></li>
+                    {% endif %}
+                    <li class="page-item"><a class="page-link" href="?page={{page_obj.number}}">{{page_number}}</a></li>
+                
+                    
+                    {% if posts.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{posts.next_page_number}}"><i class=" medium material-icons">keyboard_arrow_right</i></a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{posts.paginator.num_pages}}"><i class=" medium material-icons">last_page</i></a></li>
+                {% endif %}
+                <li class="page-item">
+                    <a href="{% url 'new' %}" id="addition" class="btn-floating btn-large waves-effect waves"><i class="material-icons">add</i></a>
+                </li>
+            </ul>    
+        
+            
+        </div>
+{% endblock %}

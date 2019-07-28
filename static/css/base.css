@@ -1,0 +1,17 @@
+
+nav .input-field {
+    margin-left: 2rem;
+    height: 80%;
+}
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.input-field input[type=search] {
+    display: block;
+    margin-left: 2rem;
+    line-height: inherit;
+    -webkit-transition: .3s background-color;
+    transition: .3s background-color;
+}

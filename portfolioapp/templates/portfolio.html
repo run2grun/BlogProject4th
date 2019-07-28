@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+<div class="container">
+    <div class="row">
+        {% for portfolio in portfolio.all %}
+            <div class="col s12 m7">
+                <div class="card">
+                <div class="card-image">
+                    <img src="{{ portfolio.image.url }}">
+                    <div class="card-title"><h5>{{portfolio.title}}</h5></div>
+                </div>
+                <div class="card-content">
+                    <p>{{portfolio.description}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+        <br><br>
+        <a href="{% url 'upload' %}"><button class="btn waves-effect waves-light" type="submit" value="제출하기">Submit <i class="material-icons right">add_a_photo</i></button></a>
+    </div>
+</div>
+
+{% endblock %}

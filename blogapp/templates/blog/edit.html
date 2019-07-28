@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <div class="container">
+            <form action = "{% url 'update' blog.id %}">
+                {% csrf_token %}
+                <h5> 제목 </h5>
+                <input type="text" name="title" value="{{blog.title}}">
+                <br>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                    <textarea cols=40 rows=10 class="materialize-textarea" name="body">{{blog.body}}</textarea>
+                    </div>
+                </div>
+                <br><br>
+                <button class="btn waves-effect waves-light" type="submit">Submit <i class="material-icons right">send</i></button>
+            </form>
+        
+{% endblock %}
