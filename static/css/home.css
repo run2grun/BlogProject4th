@@ -41,6 +41,11 @@ nav .input-field {
     -webkit-transition: .3s background-color;
     transition: .3s background-color;
 }
+ul:not(.browser-default) {
+    padding: auto;
+    list-style-type: none;
+    
+}
 .paginator{
     display: block;
     position: relative;
@@ -49,7 +54,7 @@ nav .input-field {
 .btn-floating i {
     display: block;
     line-height: 56px;
-    background-color: #37224C !important ;
+    background-color: #97b4d7!important ;
     position: relative;
 
 }
