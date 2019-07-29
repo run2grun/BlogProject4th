@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/new.css' %}">
     <body>
         <div class="container">
             <form action = "{% url 'update' blog.id %}">

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+<br><br>
+<h3>로그인/LogIn</h3>
+<br><br>
+<div class="container">
+    <form method="POST" action="{% url 'login'%}">
+        {% csrf_token %}
+        Username:
+        <br>
+        <input name="username" type="text" value="">
+        <br>
+        Password:
+        <br>
+        <input name="password" type="password" value="">
+        <br>
+        <br>
+        <input class="btn btn-primary" type="submit" value="LogIn">
+    </form>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'KOMACON'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+h3{
+    font-family: 'KOMACON'; 
+    text-align: center;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    width: 40%;
+    margin:auto;
+}
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: #244a5a;
+    background-color: #dedce6;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+    align-content: center;
+    font-family: 'HangeulNuri-Bold'; 
+}
+button, input, optgroup, select, textarea {
+    font-family: 'KOMACON'; 
+}

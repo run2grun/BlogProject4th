@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Portfolio
 
 
@@ -15,4 +15,4 @@ def create2(request):
     photo.image = request.FILES['image']
     photo.description = request.POST['description']
     photo.save()
-    return redirect('blog/portfolio')
+    return redirect('portfolio')

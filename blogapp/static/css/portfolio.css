@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'KOMACON'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+nav {
+    color: #C2D5ee;
+    background-color: #1d557c !important;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+img {
+    border-style: none;
+    width: 60%;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    min-height: 0%;
+}
+body {
+    margin: 0;
+    font-family: 'KOMACON'; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    overflow: auto;
+}
+h4 {
+    font-family: 'KOMACON'; 
+    color: #071c34;
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.52rem 0 .912rem 0;
+}
+.col-md-4{
+    display: flex;
+    padding: none;
+
+}
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: #244a5a !important;
+    background-color: #dedce6!important;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+.btn-floating i {
+    width: inherit;
+    text-align: center;
+    color: #244a5a !important;
+    background-color: #97b4d7!important ;
+    font-size: 1.6rem;
+    line-height: 40px;
+    
+}
+.btn-floating.btn-large {
+    width: 56px;
+    height: 56px;
+    padding: 0px;
+    margin-left: 90%;
+}
+a {
+    color: #C2D5ee;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}

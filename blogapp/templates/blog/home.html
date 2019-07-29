@@ -9,7 +9,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">~</th>
+                        <th scope="col" style="font-size:2.5rem">🐋</th>
                         <th scope="col">Title</th>
                         <th scope="col" style="width:30%">Date</th>
                     </tr>
@@ -44,12 +44,11 @@
                         <a class="page-link" href="?page={{posts.next_page_number}}"><i class=" medium material-icons">keyboard_arrow_right</i></a></li>
                     <li class="page-item">
                         <a class="page-link" href="?page={{posts.paginator.num_pages}}"><i class=" medium material-icons">last_page</i></a></li>
-                {% endif %}
-                <li class="page-item">
-                    <a href="{% url 'new' %}" id="addition" class="btn-floating btn-large waves-effect waves"><i class="material-icons">add</i></a>
-                </li>
+                {% endif %}     
             </ul>    
-        
+            <div class="block" class="page-item">
+                <a href="{% url 'new' %}" id="addition" class="btn-floating btn-large waves-effect waves"><i class="material-icons">add</i></a>
+            </div>
             
         </div>
 {% endblock %}

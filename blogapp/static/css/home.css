@@ -2,8 +2,12 @@
     font-family: 'KOMACON'; 
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); 
     font-weight: normal; 
-    font-style: normal; }
-
+    font-style: normal; 
+}
+body{
+    width: 100%;
+    overflow: hidden;
+}
 .table {
     font-family: 'KOMACON'; 
     padding: 15px 5px;
@@ -56,5 +60,16 @@ ul:not(.browser-default) {
     line-height: 56px;
     background-color: #97b4d7!important ;
     position: relative;
-
+    margin:auto
+}
+.btn-floating i {
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #244a5a !important;
+    font-size: 1.6rem;
+    line-height: 40px;
+}
+.block{
+    margin-left: 90%;
 }

@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/new.css' %}">
+<br><br>
     <body>
         <div class="container">
             <form action = "{% url 'create' %}">
                 {% csrf_token %}
-                <h5> 제목 </h5>
-                <input type="text" name="title">
+                <div class="row">
+                    <div class="input-field col s12">
+                    <textarea id="textarea2" class="materialize-textarea" name="title"></textarea>
+                    <label for="textarea2">제목</label>
+                    </div>
+                </div>
                 <br>
 
                 <div class="row">

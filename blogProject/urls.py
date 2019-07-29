@@ -27,6 +27,7 @@ urlpatterns = [
     path('blog/portfolio/', portfolioapp.views.portfolio, name='portfolio'),
     path('blog/portfolio/upload', portfolioapp.views.upload, name="upload"),
     path('blog/portfolio/create2', portfolioapp.views.create2, name="create2"),
+    path('accounts/',include('accountsapp.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # FIXME: BASE.html 만들었는데 템플릿이 존재하지 않는다고 뜬다.

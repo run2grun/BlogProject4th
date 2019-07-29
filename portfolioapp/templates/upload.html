@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/upload.css' %}">
+<br><br><br><br>
 <form method='post' action = "{% url 'create2' %}" enctype="multipart/form-data">
     {% csrf_token %}
-    <label for = "title">제목</label>
-    <input type="text" name="title" id="title">
-    <br><label for = "description">설명</label><br>
-    <textarea name="description" id = "description" rows="5" cols="40"></textarea>
-    <br><input type="file" name="image" id="image">
-    <input type = "submit" value="제출"></form>
+    <label for="textarea2">제목</label><br>
+    <textarea id="textarea2" class="materialize-textarea" name="title" id="title"></textarea>
+    
+    <br>
+    <label for="textarea2">설명</label><br>
+    <textarea name="description" id = "description" class="materialize-textarea"></textarea>
+    <br>
+        <button class="btn waves-effect waves-light"><input type="file" name="image" id="image" value="Upload"><i class="material-icons right">file_upload</i></<button>
+        <br><br><br>
+        <button class="btn waves-effect waves-light"><input type="submit" value="제출하기"> <i class="material-icons right">send</i></button>
+</form>
 
 {% endblock %}
+

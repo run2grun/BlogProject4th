@@ -1,0 +1,43 @@
+@font-face { 
+    font-family: 'HangeulNuri-Bold'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'KOMACON'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+.input-field>label {
+    color: #9e9e9e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    cursor: text;
+    font-family: 'HangeulNuri-Bold'; 
+}
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: #244a5a;
+    background-color: #dedce6;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+textarea.materialize-textarea {
+    line-height: normal;
+    overflow-y: hidden;
+    padding: .8rem 0 .8rem 0;
+    resize: none;
+    min-height: 5rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button, input, optgroup, select, textarea {
+    font-family: 'KOMACON'; 
+}
